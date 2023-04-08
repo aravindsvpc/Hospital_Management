@@ -34,9 +34,7 @@
             margin-right: 100px;
             border-radius: 5px;
             background: transparent;
-            border-top: none;
-            border-left: none;
-            border-right: none;
+            
         }
         input[type=number]{
             background: transparent;
