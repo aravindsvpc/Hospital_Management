@@ -1,0 +1,52 @@
+        h3 {
+            font-family: Georgia, 'Times New Roman', Times, serif ;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: bold;
+            color: rgb(233, 233, 246);
+            text-align: center;
+            text-decoration: underline;
+        }
+        button,input[type=reset],input[type=submit] {
+            font-family: Georgia, 'Times New Roman', Times, serif ;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: bold;
+            color: rgb(15, 15, 215);
+            text-align: center;
+            border-radius: 15px;
+            background: transparent;
+        }
+        table {
+            background-color: rgb(166, 253, 249);
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 20px;
+
+        }
+        input[type=text],input[type=number],input[type=email],input[type=date],select{
+            box-sizing: border-box;
+            width: 80%;
+            padding: 5px 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-right: 100px;
+            border-radius: 5px;
+            background: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        input[type=number]{
+            background: transparent;
+        }
+        textarea{
+            box-sizing: border-box ;
+            background: transparent;
+            padding: 5px 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Doctor</title>
+    <link rel="Stylesheet" href="styling.css" type="text/css">
+    
+</head>
+<script>
+    function validation(){
+    var letters = /^[A-Za-z]+$/;
+    var em = /^[A-Za-z0-9]+@[A-Za-z]+.[A-Za-z]+$/;
+    var fn=document.doctor.fname.value;
+    if(fn==null||fn=="")
+    {
+        alert("Enter Valid First Name");
+        return false;
+    }
+    else if(fn.length>20)
+    {
+        alert("First Name should be less than 20 charcters");
+        return false;
+    }
+    else if(!fn.match(letters))
+    {
+        alert("Enter only alphabets");
+        return false;
+    }
+    var ln=document.doctor.lname.value;
+    if(ln==null||ln=="")
+    {
+        alert("Enter Valid Last Name");
+        return false;
+    }
+    else if(ln.length>20)
+    {
+        alert("Last Name should be less than 20 charcters");
+        return false;
+    }
+    else if(!ln.match(letters))
+    {
+        alert("Enter only alphabets");
+        return false;
+    }
+    var mai=document.doctor.mail.value;
+    if(!mai.match(em))
+    {
+        alert("Enter valid Email ID");
+        return false;
+    }
+    var mobno=document.doctor.mobno.value;
+    if(mobno.length!=10)
+    {
+        alert("Mobile Number should be 10 digits.");
+        return false;
+    }
+    }
+    
+</script>
+<body style="background-color:rgb(6, 141, 203);">
+    <h3>Add Doctor Details</h3>
+    <form name="doctor" action="home.htm" onsubmit="return validation()">
+        <table align="center"  cellpadding="5" cellspacing="2" >
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td rowspan="16"></td>
+                <td>First Name</td>
+                <td><input type="text" name="fname" ></td>
+            </tr>
+            <tr>
+                <td>Middle Name</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="lname"></td>
+            </tr>
+            <tr>
+                <td>Register Num</td>
+                <td><input type="number" required></td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" required></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gen" value="Male" required> Male
+                    <input type="radio" name="gen" value="Female" required> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="mail" required></td>
+            </tr>
+            <tr>
+                <td>Specialisation</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>Qualification</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>Contact No</td>
+                <td><input type="number" name="mobno" required></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea cols=30 rows=5></textarea></td>
+            </tr>
+            <tr>
+                <td>Visiting Time</td>
+                <td><select name="vis_time" required>
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Evening</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Visiting Days</td>
+                <td><select name="vis_days" multiple required>
+                    <option>Mon</option>
+                    <option>Tue</option>
+                    <option>Wed</option>
+                    <option>Thurs</option>
+                    <option>Fri</option>
+                    <option>Sat</option>
+                    <option>Sun</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>No of patients per day</td>
+                <td><input type="number" required></td>
+            </tr>
+            <tr>
+                <td>Department No</td>
+                <td><input type="number" required></td>
+            </tr>
+            <tr> 
+                <td align="center"><input type="reset"></td>
+                <td align="center"><input type="submit"></td>
+            </tr>
+            <tr><td></td></tr>
+        </table>
+    </form>
+</body>
+</html>
